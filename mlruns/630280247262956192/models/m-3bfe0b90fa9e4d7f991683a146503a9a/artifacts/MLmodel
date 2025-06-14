@@ -1,0 +1,22 @@
+artifact_path: file:///Users/emirhanbaran/Desktop/ai-based-game-platform-v1/mlruns/630280247262956192/models/m-3bfe0b90fa9e4d7f991683a146503a9a/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+mlflow_version: 3.1.0
+model_id: m-3bfe0b90fa9e4d7f991683a146503a9a
+model_size_bytes: 454425
+model_uuid: m-3bfe0b90fa9e4d7f991683a146503a9a
+prompts: null
+run_id: 2a8fe90450784319b7b314cebf4cc668
+utc_time_created: '2025-06-14 11:30:25.291389'

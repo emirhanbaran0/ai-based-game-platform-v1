@@ -1,0 +1,10 @@
+artifact_location: file:///Users/emirhanbaran/Desktop/ai-based-game-platform-v1/mlruns/630280247262956192/models/m-d55830145b3c4293bca450278bf7ca57/artifacts
+creation_timestamp: 1749900626544
+experiment_id: '630280247262956192'
+last_updated_timestamp: 1749900627611
+model_id: m-d55830145b3c4293bca450278bf7ca57
+model_type: null
+name: model
+source_run_id: e2ba8b70480a48728b5bdb095e2cc84b
+status: 2
+status_message: null

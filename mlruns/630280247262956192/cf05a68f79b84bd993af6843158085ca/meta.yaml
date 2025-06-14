@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/emirhanbaran/Desktop/ai-based-game-platform-v1/mlruns/630280247262956192/cf05a68f79b84bd993af6843158085ca/artifacts
+end_time: 1749900629950
+entry_point_name: ''
+experiment_id: '630280247262956192'
+lifecycle_stage: active
+run_id: cf05a68f79b84bd993af6843158085ca
+run_name: silent-shark-90
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749900628840
+status: 3
+tags: []
+user_id: emirhanbaran
