@@ -1,0 +1,16 @@
+{
+  "training_columns": [
+    "country",
+    "age",
+    "sex",
+    "total_ad_viewed",
+    "total_spent_in_usd",
+    "total_spent_time",
+    "level_completion_count",
+    "avg_level_completion_time",
+    "easy_completion_rate",
+    "medium_completion_rate",
+    "hard_completion_rate",
+    "days_since_first_login"
+  ]
+}

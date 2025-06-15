@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import mlflow
 import os
@@ -31,6 +32,12 @@ def main():
     X = df.drop(columns=[config['target_column']])
     y = df[config['target_column']]
     
+    label_encoders = {}
+    for col in ['country', 'sex']:
+        le = LabelEncoder()
+        df[col] = le.fit_transform(df[col])
+        # YENİ: Encoder'ın öğrendiği sınıfları (kategorileri) sakla
+        label_encoders[col] = list(le.classes_)
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -64,6 +71,15 @@ def main():
                 
                 # Modeli MLflow'a bir 'artifact' olarak kaydet
                 mlflow.sklearn.log_model(model.model, "model")
+
+                 # LabelEncoder sınıflarını JSON olarak kaydet
+                mlflow.log_dict(label_encoders, "label_encoders.json")
+
+                # Tahmin için gerekli diğer bilgileri JSON olarak kaydet
+                run_info = {
+                    "training_columns": list(X.columns)
+                }
+                mlflow.log_dict(run_info, "run_info.json")
 
     print("\nTüm deneyler tamamlandı. Sonuçları görmek için terminale 'mlflow ui' yazın.")
 

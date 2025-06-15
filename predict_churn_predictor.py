@@ -30,7 +30,6 @@ def predict_with_model(run_id, raw_data_df):
     with open(run_info_path) as f:
         run_info = json.load(f)
 
-    min_login_date = pd.to_datetime(run_info['min_login_date'])
     training_columns = run_info['training_columns']
     
     print("✅ Objeler başarıyla yüklendi.")
@@ -38,7 +37,6 @@ def predict_with_model(run_id, raw_data_df):
     print("🛠️  Tahmin verisi işleniyor...")
     processed_df = raw_data_df.copy()
     processed_df['first_time_login'] = pd.to_datetime(processed_df['first_time_login'])
-    processed_df['days_since_first_login'] = (processed_df['first_time_login'] - min_login_date).dt.days
     processed_df = processed_df.drop(columns=['first_time_login'])
 
     for col, classes in label_encoders_classes.items():
@@ -66,16 +64,45 @@ if __name__ == '__main__':
     args = parser.parse_args()
     # ----------------------------------------------------
 
-    # Tahmin yapılacak yeni HAM kullanıcı verisi
+
     sample_raw_data = pd.DataFrame({
-        'user_key_id': [98765],
-        'country': ['Germany'],
-        'sex': ['Male'],
-        'age': [34],
-        'first_time_login': ['2025-05-10'],
-        'total_session_time_x': [5500.0]
-        # ... modelin beklediği diğer ham sütunlar ...
+    'user_key_id': ['CDMl6fGsuz'],
+    'country': ['DE'],
+    'age': [36],
+    'sex': ['Men'],
+    'first_time_login': ['2025-03-22 08:06:23'],
+    'session_count': [81],
+    'total_session_time_x': [100811],
+    'total_ad_viewed': [536],
+    'total_spent_in_usd': [0],
+    'total_spent_time': [0],
+    'total_session_time_y': [100811],
+    'level_completion_count': [9],
+    'avg_level_completion_time': [11201.22222],
+    'easy_completion_rate': [100],
+    'medium_completion_rate': [50],
+    'hard_completion_rate': [0],
+})
+
+    sample_raw_data1 = pd.DataFrame({
+    'user_key_id': ['wFfzWC1Ydt'],
+    'country': ['US'],
+    'age': [18],
+    'sex': ['Men'],
+    'first_time_login': ['2025-04-10 02:16:18'],
+    'session_count': [65],
+    'total_session_time_x': [15986],
+    'total_ad_viewed': [30],
+    'total_spent_in_usd': [0],
+    'total_spent_time': [0],
+    'total_session_time_y': [75586],
+    'level_completion_count': [8],
+    'avg_level_completion_time': [12597.66667],
+    'easy_completion_rate': [25],
+    'medium_completion_rate': [0],
+    'hard_completion_rate': [0],
     })
+
 
     print("\n--- Tahmin Sonuçları ---")
     try:
