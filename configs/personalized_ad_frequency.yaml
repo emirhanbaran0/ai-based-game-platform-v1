@@ -1,0 +1,57 @@
+experiment_name: "Personalized_Ad_Frequency_Clustering_Experiments"
+
+processed_data_path: "data/processed/personalized_ad_frequency_model/filtered_final_ml_excel_personalized_ad_frequency_model.xlsx"
+
+models:
+  - model_name: "DBSCANClusterer"
+    param_grid:
+      - eps: 0.3
+        min_samples: 3
+        metric: "euclidean"
+        algorithm: "auto"
+      - eps: 0.4
+        min_samples: 3
+        metric: "manhattan"
+        algorithm: "auto"
+      - eps: 0.4
+        min_samples: 4
+        metric: "cosine"
+        algorithm: "brute"
+      - eps: 0.5
+        min_samples: 4
+        metric: "manhattan"
+        algorithm: "auto"
+      - eps: 0.6
+        min_samples: 3
+        metric: "euclidean"
+        algorithm: "auto"
+      - eps: 0.6
+        min_samples: 6
+        metric: "manhattan"
+        algorithm: "auto"
+      - eps: 0.7
+        min_samples: 5
+        metric: "cosine"
+        algorithm: "brute"
+      - eps: 0.8
+        min_samples: 3
+        metric: "euclidean"
+        algorithm: "auto"
+      - eps: 0.9
+        min_samples: 4
+        metric: "manhattan"
+        algorithm: "auto"
+      - eps: 1.0
+        min_samples: 3
+        metric: "cosine"
+        algorithm: "brute"
+      - eps: 1.1
+        min_samples: 5
+        metric: "euclidean"
+        algorithm: "auto"
+      - eps: 1.2
+        min_samples: 4
+        metric: "manhattan"
+        algorithm: "auto"
+
+

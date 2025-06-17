@@ -23,3 +23,7 @@ class BaseModel(ABC):
     def predict_proba(self, X):
         """Olasılık tahmini yapar."""
         return self.model.predict_proba(X)
+    
+    def fit_predict(self, X):
+        """Clustering yapar"""
+        return self.model.fit_predict(X)
