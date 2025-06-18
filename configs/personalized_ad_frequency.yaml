@@ -54,4 +54,26 @@ models:
         metric: "manhattan"
         algorithm: "auto"
 
+  - model_name: "KMeansClusterer"
+    param_grid:
+      - n_clusters: 3
+        init: "k-means++"
+        n_init: 10
+        max_iter: 300
 
+  - model_name: "AgglomerativeClusterer"
+    param_grid:
+      - n_clusters: 3
+        metric: "euclidean"
+        linkage: "ward"
+
+  - model_name: "MeanShiftClusterer"
+    param_grid:
+      - bandwidth: 2
+        bin_seeding: True
+
+  - model_name: "GaussianMixtureClusterer"
+    param_grid:
+      - n_components: 3
+        covariance_type: "full"
+        max_iter: 100
