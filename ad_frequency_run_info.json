@@ -1,0 +1,8 @@
+{
+  "training_columns": [
+    "total_ad_viewed",
+    "session_count",
+    "total_session_time",
+    "total_earned_reward_amount_in_usd"
+  ]
+}
