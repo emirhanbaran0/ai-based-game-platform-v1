@@ -21,8 +21,8 @@ def predict_with_model(run_id, raw_data_df):
     print(f"🔄 Model ve gerekli objeler yükleniyor... (Run ID: {run_id})")
 
     # Gerekli objeleri yükle...
-    label_encoders_path = download_mlflow_artifact(run_id, "label_encoders.json")
-    run_info_path = download_mlflow_artifact(run_id, "run_info.json")
+    label_encoders_path = download_mlflow_artifact(run_id, "churn_predictor_label_encoders.json")
+    run_info_path = download_mlflow_artifact(run_id, "churn_predictor_run_info.json")
 
     with open(label_encoders_path) as f:
         label_encoders_classes = json.load(f)
