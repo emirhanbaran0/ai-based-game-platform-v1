@@ -1,0 +1,14 @@
+experiment_name: "Personalized_Level_Difficulty_Clustering_Experiments"
+
+processed_data_path: "data/processed/personalized_difficulty_model/filtered_final_ml_excel_personalized_difficulty_model.xlsx"
+
+models:     
+  - model_name: "KMeansClusterer"
+    param_grid:
+      - n_clusters: 3
+        init: "k-means++"
+        n_init: 10
+        max_iter: 300
+
+
+
