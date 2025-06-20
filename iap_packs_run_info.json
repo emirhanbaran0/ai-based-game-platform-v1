@@ -3,6 +3,7 @@
     "country",
     "age",
     "sex",
+    "total_spent_in_usd",
     "total_spent_time",
     "session_count",
     "total_session_time",
