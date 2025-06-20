@@ -1,0 +1,14 @@
+experiment_name: "Personalized_Iap_Packs_Clustering_Experiments"
+
+processed_data_path: "data/processed/personalized_iap_pack_model/filtered_final_ml_excel_personalized_iap_pack_model.xlsx"
+
+models:     
+  - model_name: "KMeansClusterer"
+    param_grid:
+      - n_clusters: 3
+        init: "k-means++"
+        n_init: 10
+        max_iter: 300
+
+
+

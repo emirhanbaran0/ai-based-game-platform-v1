@@ -1,0 +1,14 @@
+{
+  "training_columns": [
+    "country",
+    "age",
+    "sex",
+    "total_spent_in_usd",
+    "total_spent_time",
+    "avg_daily_session",
+    "avg_weekly_session",
+    "easy_completion_rate",
+    "medium_completion_rate",
+    "hard_completion_rate"
+  ]
+}

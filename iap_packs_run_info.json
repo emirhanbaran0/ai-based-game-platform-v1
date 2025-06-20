@@ -1,0 +1,13 @@
+{
+  "training_columns": [
+    "country",
+    "age",
+    "sex",
+    "total_spent_time",
+    "session_count",
+    "total_session_time",
+    "easy_completion_rate",
+    "medium_completion_rate",
+    "hard_completion_rate"
+  ]
+}
