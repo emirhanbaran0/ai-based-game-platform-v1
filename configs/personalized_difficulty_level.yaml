@@ -1,6 +1,6 @@
 experiment_name: "Personalized_Level_Difficulty_Clustering_Experiments"
 
-processed_data_path: "data/processed/personalized_difficulty_model/filtered_final_ml_excel_personalized_difficulty_model.xlsx"
+processed_data_path: "data/processed/personalized_difficulty_model/filtered_final_ml_excel_personalized_difficulty_model_for_ml.xlsx"
 
 models:     
   - model_name: "KMeansClusterer"
