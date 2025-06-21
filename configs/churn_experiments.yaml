@@ -1,6 +1,5 @@
 experiment_name: "Churn_Prediction_Experiments"
 
-# Processed churn dataset
 processed_data_path: "data/processed/churn_predictor/filtered_final_ml_excel_churn_predictor_for_ml.csv"
 target_column: "is_quit"
 

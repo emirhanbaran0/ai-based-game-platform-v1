@@ -26,7 +26,6 @@ def main():
         print(f"❌ HATA: Gerekli bir dosya bulunamadı -> {processed_data_path}")
         return None
         
-    # Veriyi yükle
     df = pd.read_csv(processed_data_path)
     X = df.drop(columns=[config['target_column']])
     y = df[config['target_column']]
