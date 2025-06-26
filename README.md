@@ -92,6 +92,7 @@ Her modelin yapılandırması için `configs/` klasöründeki ilgili `.yaml` dos
 - Veriler, modeller ve çıktıların yol ve adlandırmaları üzerinde çalışırken dikkatli olun.
 - Herhangi bir .ipynb dosyasını açıp çalıştırmak için Jupyter Notebook veya JupyterLab kurulu olmalı.
 
+
 ## Gereksinimler
 
 `requirements.txt` dosyasındaki başlıca paketler:
