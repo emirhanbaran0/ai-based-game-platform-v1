@@ -52,7 +52,7 @@ def main():
                 mlflow.set_tag("model_name", model_name)
                 
                 model = ModelClass(params)
-                model.train(X_train, y_train)
+                model.train(X_train, y_train) 
                 
                 predictions = model.predict(X_test)
                 metrics = evaluate_model(y_test, predictions)
