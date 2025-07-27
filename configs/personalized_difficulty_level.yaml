@@ -43,7 +43,7 @@ models:
         algorithm: lloyd
   - model_name: "SpectralClusterer"
     param_grid:
-      - n_clusters : 7
+      - n_clusters : 3
         affinity : "nearest_neighbors"
         assign_labels : "kmeans"
         random_state : 42

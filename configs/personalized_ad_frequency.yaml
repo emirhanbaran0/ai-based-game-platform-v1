@@ -6,51 +6,51 @@ models:
   - model_name: "DBSCANClusterer"
     param_grid:
       - eps: 0.3
-        min_samples: 3
+        min_samples: 200
         metric: "euclidean"
         algorithm: "auto"
       - eps: 0.4
-        min_samples: 3
+        min_samples: 200
         metric: "manhattan"
         algorithm: "auto"
       - eps: 0.4
-        min_samples: 4
+        min_samples: 200
         metric: "cosine"
         algorithm: "brute"
       - eps: 0.5
-        min_samples: 4
+        min_samples: 200
         metric: "manhattan"
         algorithm: "auto"
       - eps: 0.6
-        min_samples: 3
+        min_samples: 300
         metric: "euclidean"
         algorithm: "auto"
       - eps: 0.6
-        min_samples: 6
+        min_samples: 400
         metric: "manhattan"
         algorithm: "auto"
       - eps: 0.7
-        min_samples: 5
+        min_samples: 500
         metric: "cosine"
         algorithm: "brute"
       - eps: 0.8
-        min_samples: 3
+        min_samples: 300
         metric: "euclidean"
         algorithm: "auto"
       - eps: 0.9
-        min_samples: 4
+        min_samples: 400
         metric: "manhattan"
         algorithm: "auto"
       - eps: 1.0
-        min_samples: 3
+        min_samples: 300
         metric: "cosine"
         algorithm: "brute"
       - eps: 1.1
-        min_samples: 5
+        min_samples: 500
         metric: "euclidean"
         algorithm: "auto"
       - eps: 1.2
-        min_samples: 4
+        min_samples: 500
         metric: "manhattan"
         algorithm: "auto"
 
